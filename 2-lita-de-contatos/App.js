@@ -1,0 +1,106 @@
+import React, { useState } from "react";
+import { StyleSheet, Text, View, ScrollView, FlatList} from "react-native";
+import contatos from "./contatos.json"
+
+const Contact = ({ name, phone }) => {
+  return (
+   <></>
+  );
+};
+
+const App = () => {
+  const [contacts, setContacts] = useState([
+    {
+      "nome": "Cecília Analu Joana Cavalcanti",
+      "celular": "(91) 99274-4656",
+      
+    },
+    {
+      "nome": "Vinicius Miguel Gabriel Nunes",
+      "celular": "(41) 99205-4756",
+     
+    },
+    {
+      "nome": "Emily Isabel Teixeira",
+      "celular": "(61) 98240-5664",
+      
+    },
+    {
+      "nome": "José Nathan Heitor Aparício",
+      "celular": "(63) 98575-7169",
+     
+    },
+    {
+      "nome": "Kaique Kaique Manuel Oliveira",
+      "celular": "(68) 98934-8243",
+      
+    },
+    {
+      "nome": "Renato Lorenzo Lucas Bernardes",
+      "celular": "(71) 98640-1437",
+      
+    },
+    {
+      "nome": "Noah Cauã Gonçalves",
+      "celular": "(95) 99619-9594",
+      
+    },
+    {
+      "nome": "Levi Luiz Vinicius Costa",
+      "celular": "(96) 98912-4148",
+      
+    },
+    {
+      "nome": "Bernardo Paulo Oliver Caldeira",
+      "celular": "(83) 98720-0946",
+      
+    },
+    {
+      "nome": "Enzo Sérgio Fogaça",
+      "celular": "(95) 98835-2271",
+      
+    },
+    {
+      "nome": "Rebeca Mariana Rebeca Ferreira",
+      "celular": "(95) 98603-9051",
+      
+    },
+    {
+      "nome": "João Emanuel Martins",
+      "celular": "(67) 99714-0824",
+     
+    },
+    {
+      "nome": "Sophie Alana Heloise Melo",
+      "celular": "(91) 99124-5377",
+      
+    },
+    {
+      "nome": "Oliver Paulo Jesus",
+      "celular": "(48) 98708-6386",
+      
+    },
+    {
+      "nome": "Pietro Roberto Joaquim Barbosa",
+      "celular": "(81) 98539-5160",
+      
+    }
+  ]);
+
+  
+  return (
+    <View style={styles.container}>
+     
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginTop: 50,
+    backgroundColor: "#fff",
+  }
+});
+
+export default App;
