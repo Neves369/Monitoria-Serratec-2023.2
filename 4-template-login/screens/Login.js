@@ -1,6 +1,7 @@
 import { useState, useContext } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import AuthContext from "../context/auth";
+import { Avatar } from 'react-native-paper';
 import { StyleSheet, Text, View, TextInput, Image, TouchableOpacity } from 'react-native';
 import logo from "../assets/logo.png";
 
@@ -32,7 +33,7 @@ export default function Login() {
     <View style={styles.container}>
       <StatusBar style="dark" />
 
-      <Image resizeMode="contain" style={styles.logo} source={logo}/>
+      <Avatar.Image resizeMode="contain" size={100} source={logo} /> 
 
       <Text style={styles.title}>Login</Text>
 

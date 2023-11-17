@@ -1,25 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, Button, Image, TouchableOpacity } from 'react-native';
+import { useState, useContext } from 'react';
+import AuthContext from '../context/auth';
+import { Avatar, Button, Card, Text } from 'react-native-paper';
+import { StyleSheet, View, TextInput, Image, TouchableOpacity } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Home() {
 
-  
+  const { user, signOut } = useContext(AuthContext);
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+      <Card>
+        <Card.Title title={`${user.email}`}/>
+      </Card>
+
+      <Card>
+        <Button icon="camera" mode="contained" onPress={() =>{signOut()}}>
+          sair
+        </Button>  
+      </Card>
 
 
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'red',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 25
+    backgroundColor: "red",
+    padding: 50,
+    gap: 20
   },
 });
